@@ -12,8 +12,7 @@ const Todos: React.FC<{ items: TodoDM[]; removeTodo: (id: string) => void }> = (
         <Todo
           key={item.id}
           text={item.text}
-          id={item.id}
-          removeTodo={(id: string) => props.removeTodo(id)}
+          removeTodo={() => props.removeTodo(item.id)}
         />
       ))}
     </ul>
